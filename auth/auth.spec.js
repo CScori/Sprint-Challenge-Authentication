@@ -24,10 +24,10 @@ describe("users", () => {
         .post("/api/auth/register")
         .send({ username: "me", password: "king" })
         .then(res => {
-          expect(res.body.username).toBe("black");
+          expect(res.body.username).toBe("me");
           expect(res.body.id).toBe(1);
         });
-    });
+    }); 
   });
 
   describe("POST /api/auth/login", () => {
